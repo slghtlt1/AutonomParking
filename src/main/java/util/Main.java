@@ -11,26 +11,13 @@ import java.util.Scanner;
 public class Main {
     public static void main(String arg[]) {
         try {
-//            String driver = "com.mysql.jdbc.Driver";
-//            String myURl = "jdbc:mysql://localhost:3306/Persoane";
-//            Class.forName(driver);
-//            Connection conn = DriverManager.getConnection(myURl, "root", "slghtlt1");
-//
-//            Statement st = conn.createStatement();
-////            st.executeUpdate("Insert into Personal" + " VALUES (8,'Iacob')");
-////            st.executeUpdate("INSERT into Personal" + " VALUES (9,'Marean')");
-//
-////            String sql = "UPDATE Personal " + "SET Nume = 'George' Where id =7";
-////            String sql = "Delete from Personal where id = 4";
-//
-//            ConnDB.createConn();
             Scanner s = new Scanner(System.in);
             System.out.println("Chose one option(1 or 2):");
             int nr = s.nextInt();
             switch (nr) {                          //TODO: Pun functia de user si parola intr-o functie separata si sa fie private
                 case 1:
                     verifyLogin();
-                        break;
+                    break;
 
                 case 2:
                     verifyRegister();
@@ -56,6 +43,7 @@ public class Main {
         else
             throw new ExceptionCustom("You did something wrong or you don't have an account");
     }
+
     private static void verifyRegister() throws SQLException {
         Scanner s = new Scanner(System.in);
         System.out.println("Insert user:");  //TODO: functiile de register le pun intr-o functie separata + private
