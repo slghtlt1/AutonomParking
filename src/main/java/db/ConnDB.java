@@ -10,6 +10,6 @@ public class ConnDB {
         Class.forName(ConnectionDB.driver);
         return DriverManager.getConnection(ConnectionDB.url, "root", "slghtlt1");
     }
-
+//1
 
 }
