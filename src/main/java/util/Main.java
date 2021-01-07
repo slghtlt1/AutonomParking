@@ -56,7 +56,7 @@ public class Main {
             System.out.println("Retype password, you need to insert alpha numerics charachters");
             passRegister = s.next();
         } while (ValidateDB.passCorrectRegister(passRegister) == true);
-
+//asta e original
         System.out.println("Confirm password:");
         String passRegisterConfirm = s.next();
 
