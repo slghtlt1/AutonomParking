@@ -38,7 +38,7 @@ public class ValidateDB {
         return false;
     }
 
-
+//1
     public static boolean passCorrectRegister(String passInserted) {
         if (passInserted.length() <= 10) {
             if (passInserted.matches("[a-zA-Z][0-9]")) {

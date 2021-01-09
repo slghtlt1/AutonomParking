@@ -5,7 +5,7 @@ import db.ConnDB;
 import java.sql.Connection;
 import java.sql.SQLException;
 import java.sql.Statement;
-
+//1
 public class OperattiDB {
     private static Connection conn;
     static {

@@ -1,0 +1,6 @@
+util/FullDB.class
+util/ValidateDB.class
+util/DBUtil.class
+exception/ExceptionCustom.class
+util/OperattiDB.class
+util/ConnDB.class

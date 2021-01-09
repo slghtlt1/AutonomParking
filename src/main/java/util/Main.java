@@ -3,7 +3,8 @@ package util;
 
 import db.OperattiDB;
 import db.ValidateDB;
-import exception.ExceptionCustom;
+import exception.ExceptionLogin;
+import exception.ExceptionLogin;
 
 import java.sql.SQLException;
 import java.util.Scanner;
@@ -23,7 +24,7 @@ public class Main {
                     verifyRegister();
                     break;
                 default:
-                    throw new ExceptionCustom("You inserted an incorrect value, please insert 1 or 2");
+                    throw new ExceptionLogin("You inserted an incorrect value, please insert 1 or 2");
             }
 
         } catch (Exception e) {
@@ -32,7 +33,7 @@ public class Main {
     }
 
 
-    private static void verifyLogin() throws ExceptionCustom, SQLException, ClassNotFoundException {
+    private static void verifyLogin() throws SQLException, ClassNotFoundException, ExceptionLogin {
         Scanner s = new Scanner(System.in);
         System.out.println("Insert user:");
         String user = s.next();
@@ -41,7 +42,7 @@ public class Main {
         if (ValidateDB.existDB(user) == true && ValidateDB.passCorrectLogin(pass) == true)
             System.out.println("User and passord is correct");
         else
-            throw new ExceptionCustom("You did something wrong or you don't have an account");
+            throw new ExceptionLogin("You did something wrong or you don't have an account");
     }
 
     private static void verifyRegister() throws SQLException {
@@ -51,12 +52,12 @@ public class Main {
 
         System.out.println("Insert password:");
         String passRegister = s.next();
-
         do {
             System.out.println("Retype password, you need to insert alpha numerics charachters");
             passRegister = s.next();
         } while (ValidateDB.passCorrectRegister(passRegister) == true);
-
+//asta e original si sterge te rog rahatul scris de jos ca sa fie diferit de main
+        System.out.println("da");
         System.out.println("Confirm password:");
         String passRegisterConfirm = s.next();
 
