@@ -1,6 +1,7 @@
 package db;
 
 import util.DBUtil;
+import util.LoginDB;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
@@ -11,8 +12,8 @@ public class ConnDB {
     public static Connection createConn() throws ClassNotFoundException, SQLException {
         String user = "root";
         String pass = "slghtlt1";
-        Class.forName(DBUtil.driver);
-        return DriverManager.getConnection(DBUtil.url, user, pass);
+        Class.forName(DBUtil.DRIVER);
+        return DriverManager.getConnection(DBUtil.URL, LoginDB.USER, LoginDB.PASS);
     }
 
 //1
